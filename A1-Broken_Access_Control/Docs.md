@@ -1,4 +1,4 @@
-# (A1) Broken Access Control
+# (A1) Hijack a session
 
 ### Vulnerability Description
 The application creates session tokens which follow clear patterns so attackers can perform automated authentication attempts to obtain valid session IDs. The method lets attackers access different user sessions without authorization. The generation of session tokens should be random otherwise attackers can carry out session hijacking.
