@@ -1,8 +1,7 @@
 # (A1) Broken Access Control
 
 ### Vulnerability Description
-The application uses predictable session tokens (`hijack_cookie`), allowing attackers to brute-force valid session IDs. This enables unauthorized access to other users’ sessions. Poor randomness in token generation leads to session hijacking.
-
+The application creates session tokens which follow clear patterns so attackers can perform automated authentication attempts to obtain valid session IDs. The method lets attackers access different user sessions without authorization. The generation of session tokens should be random otherwise attackers can carry out session hijacking.
 
 ---
 
@@ -10,7 +9,7 @@ The application uses predictable session tokens (`hijack_cookie`), allowing atta
 ### Steps Taken
 
 1. **Initial Observation**  
-   Navigated to the "Hijack a Session" WebGoat module to understand the session-based access control issue.  
+   Accesa Hijack a Session module under "(A1) Broken Access Control"
      <img width="909" alt="a1_1" src="https://github.com/user-attachments/assets/30b7c71a-267d-465e-adaf-22f176300373" />
 
 2. **Captured Login Request** 
@@ -22,7 +21,7 @@ The application uses predictable session tokens (`hijack_cookie`), allowing atta
      <img width="660" alt="a1_2" src="https://github.com/user-attachments/assets/e1450eff-6f3b-4172-a49e-d7b83f3808df" />
 
 4. **Observed Cookie Pattern**  
-   Repeated the login request multiple times. The hijack_cookie value was updated for each request and appeared sequential with slight variation. These values were saved for analysis.  
+   The login request was executed multiple times sequentially. The value of hijack_cookie updated itself in a sequential pattern that showed minor differences between requests. The tracked values were for later analysis.  
      <img width="657" alt="a1_3" src="https://github.com/user-attachments/assets/7a849a30-3ff5-4cd5-b4b9-ad0ea5686ea5" />
 
 5. **Identified Predictable Patterns**  
@@ -34,7 +33,7 @@ The application uses predictable session tokens (`hijack_cookie`), allowing atta
      <img width="659" alt="a1_5" src="https://github.com/user-attachments/assets/fcc6df0f-35e6-46d9-ab4d-b0cd02ab3e67" />
 
 7. **Successful Session Hijacking**  
-   Identified a valid session token, leading to successful unauthorized access.  
+   Identified a valid session token, which can be used to gain unauthorized access.  
      <img width="872" alt="a1_6" src="https://github.com/user-attachments/assets/d7dd092b-d12a-4a3a-9346-723db9e39ade" />
 
 8. **Lesson Completion Confirmed**  
