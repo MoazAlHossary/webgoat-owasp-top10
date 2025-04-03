@@ -11,16 +11,17 @@ The application uses predictable and reversible cookie values to manage authenti
 2. Intercepted the login request and extracted the `spoof_auth` cookie.
    ![Step 2](https://github.com/user-attachments/assets/37adcc94-19d4-43ff-8d63-ab7b24fe89f1)
 
-3. Decoded the cookie from base64 format to inspect its content.
-   ![Step 3](https://github.com/user-attachments/assets/fef5a70b-d4a4-441e-b06e-0b2c34e65658)
+3. Decoded the cookie from base64 format to inspect its content.  
+   ![Step 3](https://github.com/user-attachments/assets/fef5a70b-d4a4-441e-b06e-0b2c34e65658)  
 
 4. Identified the decoded string was in hexadecimal format and converted it to text.
+   
    ![Step 4](https://github.com/user-attachments/assets/7d047889-d12f-4c18-9f8a-6c4b19edd224)
 
-5. Discovered the username is embedded in reverse (e.g., webgoat becomes "taogbew" reversed and obfuscated).
+6. Discovered the username is embedded in reverse (e.g., webgoat becomes "taogbew" reversed and obfuscated).
    ![Step 5](https://github.com/user-attachments/assets/b6167f85-7d12-413d-a7ad-f3264cc5e487)
 
-6. Reversed the username 'tom' into 'mot', appended similar pattern text, converted to hex, then base64 encoded.
+7. Reversed the username 'tom' into 'mot', appended similar pattern text, converted to hex, then base64 encoded.
    ![Step 6](https://github.com/user-attachments/assets/94a4d32e-46cf-452a-9c98-8424fe4e021a)  
    ![Step 7](https://github.com/user-attachments/assets/43f1b52b-f97e-4c71-bbd1-0ec9bb43dcc1)  
    ![Step 8](https://github.com/user-attachments/assets/3256a6ba-d33d-43bf-a921-fcc1363a9f59)
