@@ -51,7 +51,7 @@ The application creates session tokens which follow clear patterns so attackers 
 
 ---
 
-### Risk Rating: **High**
+### Risk:
 Session hijacking compromises the confidentiality and integrity of user accounts. Exploiting this flaw allows full control over another user's authenticated session.
 
 ---
