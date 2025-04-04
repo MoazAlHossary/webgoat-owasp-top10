@@ -1,6 +1,14 @@
 
 # OWASP A9: Using Components with Known Vulnerabilities
 
+
+## Vulnerability Description
+Using outdated, vulnerable components exposes applications to known exploits, including injection attacks, remote code execution, and XSS. Developers often include third-party libraries without assessing their risk, making the attack surface broader and harder to monitor.
+
+
+---
+
+
 ## Concept & Goals
 **Concept**:  
 This section introduces the risks associated with the modern software development practice of using open source libraries. As open source adoption continues to grow (with over 4 trillion downloads in 2023), many teams integrate dependencies without verifying their security. This can lead to vulnerabilities being introduced unknowingly.
@@ -78,10 +86,18 @@ Knowing how outdated a component is helps assess risk more effectively.
 ## Some Examples of Open Source Software (OSS) Risk
 ![L](https://github.com/user-attachments/assets/7a90b3e4-00fb-43d6-bb93-c147c33f5e0f)
 
+
 ---
 
-## Vulnerability Description
-Using outdated, vulnerable components exposes applications to known exploits, including injection attacks, remote code execution, and XSS. Developers often include third-party libraries without assessing their risk, making the attack surface broader and harder to monitor.
+
+## Observed Behavior
+
+- The application included multiple third-party libraries (e.g., jquery-ui) without version enforcement, making it susceptible to known vulnerabilities across different versions.
+- In the WebGoat lesson, accessing the same functionality through two different versions of the same component revealed security discrepancies, highlighting inconsistent patching.
+- No SBOM (Software Bill of Materials) was initially present to track included libraries, leaving the system unaware of its risk surface.
+- Vulnerable components were embedded without any warning or validation, potentially enabling attacks such as XSS or remote code execution.
+- Running mvn clean install -Powasp with OWASP Dependency-Check revealed multiple known CVEs in included dependencies, validating the lack of update and review process.
+- The component license and architecture information were not clearly documented, contributing to legal and technical risk ambiguity.
 
 ---
 
@@ -98,4 +114,3 @@ Using outdated, vulnerable components exposes applications to known exploits, in
 ## References
 - [OWASP A9: Using Components with Known Vulnerabilities](https://owasp.org/www-project-top-ten/2017/A9_2017-Using_Components_with_Known_Vulnerabilities)
 - [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/)
-- [SBOM – Software Bill of Materials](https://www.ntia.gov/SBOM)
