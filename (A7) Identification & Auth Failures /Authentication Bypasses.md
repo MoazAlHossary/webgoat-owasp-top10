@@ -1,6 +1,6 @@
 # OWASP A7: Identification and Authentication Failures
 
-## Description
+## Vulnerability Description
 
 Authentication bypass vulnerabilities occur when authentication mechanisms can be tricked or circumvented. In WebGoat A7, users explore how flawed implementations—like poorly validated security questions or hidden fields—can lead to unauthorized access.
 
@@ -31,9 +31,6 @@ Authentication bypass vulnerabilities occur when authentication mechanisms can b
 
 ---
 
-##  Vulnerability Description
-
-This module demonstrates how weak fallback authentication (e.g., security questions) and logic flaws in parameter handling can result in bypassing critical security checks. Instead of validating actual answers or requiring secure tokens, the server accepts manipulated requests.
 
 ##  Observed Behavior
 
