@@ -36,7 +36,15 @@ A demonstration of submitting a malicious comment using `<script>webgoat.customj
 ![e.png](https://github.com/user-attachments/assets/6a6c81c8-491e-4af3-a399-21a54cbe31e6)  
 This output in the developer console confirms that the XSS payload was executed and the `phoneHome` method was invoked, providing a random response number indicating successful exploitation.
 
+---
 
+
+## Observed Behabior
+- The application allowed user-submitted comments to be stored and rendered without proper sanitization.
+- A malicious JavaScript payload (<script>webgoat.customjs.phoneHome()</script>) was injected into a comment field.
+- Upon revisiting the page containing the stored comment, the script executed automatically in the context of the victim's browser.
+- The developer console showed confirmation that the phoneHome function was triggered, indicating successful script execution.
+- No input validation, escaping, or content filtering was observed at the point of storage or rendering, allowing persistent script execution for all users viewing the affected page.
 
 ## Recommended Remediation
 
