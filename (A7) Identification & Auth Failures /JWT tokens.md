@@ -1,6 +1,6 @@
 # OWASP A7: Identification and Authentication Failures – JWT Module
 
-## Overview
+## Vulnerability Description
 
 This module explores the use and misuse of JSON Web Tokens (JWT) for authentication. It covers the token structure, decoding, validation pitfalls, claim tampering, algorithm abuse, and secure token refresh. Through hands-on lessons, it demonstrates how improper implementation of JWTs can lead to serious security vulnerabilities such as privilege escalation and token forgery.
 
@@ -92,24 +92,6 @@ JWT header `jku` abuse – attackers specify malicious key URLs to forge trusted
 
 ---
 
-## Interactive Challenge
-
-### ![Y](https://github.com/user-attachments/assets/6QC8PTpYy7Mmf6gE4scdZ4)  
-Try it out – goal: manipulate JWT so Jerry can delete Tom’s account, demonstrating claim-based authorization bypass.
-
----
-
-## Vulnerability Description
-
-JSON Web Tokens (JWTs) can be manipulated when server-side validation is incomplete or improperly configured. Vulnerabilities include:
-
-- Accepting unsigned tokens (`alg: none`)
-- Misusing `parse()` instead of `parseClaimsJws()` for token verification
-- Accepting tokens signed with downgraded algorithms (e.g., `HS256` instead of `RS256`)
-- Trusting client-supplied claims (e.g., `admin: true`) without verification
-- Misusing `jku` and other headers for dynamic key resolution
-
----
 
 ## Observed Behavior
 
