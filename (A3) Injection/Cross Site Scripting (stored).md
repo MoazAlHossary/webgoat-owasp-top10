@@ -46,6 +46,8 @@ This output in the developer console confirms that the XSS payload was executed 
 - The developer console showed confirmation that the phoneHome function was triggered, indicating successful script execution.
 - No input validation, escaping, or content filtering was observed at the point of storage or rendering, allowing persistent script execution for all users viewing the affected page.
 
+---
+
 ## Recommended Remediation
 
 - Sanitize and encode all user input before rendering it in the browser.
