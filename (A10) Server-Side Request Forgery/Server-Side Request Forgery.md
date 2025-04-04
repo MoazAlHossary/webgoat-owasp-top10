@@ -45,6 +45,7 @@ Server returns IP address and environment details retrieved from the external re
 ![Prevention](https://github.com/user-attachments/assets/c2dff449-de48-4e1e-888d-05a21134553e)
 The lesson concludes with guidelines on preventing SSRF by restricting server-side fetch behavior, validating input, and whitelisting domains.
 
+---
 
 ## Observed Behavior
 
@@ -67,6 +68,4 @@ The lesson concludes with guidelines on preventing SSRF by restricting server-si
 ---
 
 ## References
-
-- [OWASP SSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html)
 - [HackerOne Blog on SSRF](https://www.hackerone.com/blog-How-To-Server-Side-Request-Forgery-SSRF)
