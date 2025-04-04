@@ -1,6 +1,6 @@
 # OWASP A7: Identification and Authentication Failures – Insecure Login
 
-## Description
+## Vulnerability Description
 
 This exercise demonstrates how login credentials can be intercepted when transmitted over an unencrypted channel. Attackers can use tools like packet sniffers or proxy interceptors (e.g., Burp Suite) to capture sensitive data and gain unauthorized access.
 
@@ -23,9 +23,6 @@ This exercise demonstrates how login credentials can be intercepted when transmi
 
 ---
 
-##  Vulnerability Description
-
-Transmitting credentials over unencrypted HTTP allows attackers on the same network to intercept and reuse them. This flaw is commonly exploited in public Wi-Fi networks or internal networks where HTTPS is not enforced.
 
 ##  Observed Behavior
 
