@@ -22,16 +22,15 @@ The goal was to gain practical experience in web penetration testing by identify
 
 
 ### Completed Challenges
-| OWASP ID | Vulnerability                                 | Status |
-|----------|-----------------------------------------------|--------|
-| A1       | Injection (SQLi, Blind SQLi)                  | ✅     |
-| A2       | Cryptographic Failures                        | ✅     |
-| A3       | Injection (HTML, XSS)                         | ✅     |
-| A4       | Insecure Design                               | ✅     |
-| A5       | Security Misconfiguration                     | ✅     |
-| A6       | Vulnerable & Outdated Components              | ✅     |
-| A7       | Identification & Authentication Failures      | ✅     |
-| A8       | Software & Data Integrity Failures            | ✅     |
-| A9       | Security Logging & Monitoring Failures        | ✅     |
-| A10      | Server-Side Request Forgery (SSRF)            | ✅     |
+| OWASP ID | Vulnerability                          | Status |
+|----------|----------------------------------------|--------|
+| A1       | Broken Access Control                  | ✅     |
+| A2       | Cryptographic Failures                 | ✅     |
+| A3       | Injection                              | ✅     |
+| A5       | Security Misconfiguration              | ✅     |
+| A6       | Vuln & Outdated Components             | ✅     |
+| A7       | Identity & Auth Failure                | ✅     |
+| A8       | Software & Data Integrity              | ✅     |
+| A9       | Security Logging Failures              | ✅     |
+| A10      | Server-side Request Forgery            | ✅     |
 
