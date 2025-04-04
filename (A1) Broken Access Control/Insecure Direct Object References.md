@@ -73,11 +73,6 @@ The application exposes internal object references such as `userId`, which can b
 
 ---
 
-### Risk:
-Enables unauthorized data access and potential privilege escalation across user accounts.
-
----
-
 ### Remediation Recommendation
 - Do not expose internal identifiers like `userId` in URLs or client-side code.
 - Enforce strict access control checks on every resource access.
@@ -86,6 +81,5 @@ Enables unauthorized data access and potential privilege escalation across user 
 ---
 
 ### References
-- [OWASP Insecure Direct Object Reference Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html)
 - [OWASP Top 10: A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
 - [OWASP Testing Guide: IDOR](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/10-Testing_for_Insecure_Direct_Object_References.html)
