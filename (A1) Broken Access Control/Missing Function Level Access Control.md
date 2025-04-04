@@ -62,12 +62,6 @@ Some functionalities in the application are only hidden using client-side contro
 
 ---
 
-
-### Risk Rating
-– Functionality hidden only via client-side code can easily be discovered and accessed, leading to sensitive data exposure or unauthorized actions.
-
----
-
 ### Remediation Recommendation
 - Enforce role-based access control (RBAC) on the server side for all sensitive endpoints.
 - Avoid relying on UI obscurity (e.g., hidden elements, CSS tricks) for access control.
@@ -76,5 +70,4 @@ Some functionalities in the application are only hidden using client-side contro
 ---
 
 ### References
-- [OWASP Access Control Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html)
 - [OWASP Top 10: A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)
