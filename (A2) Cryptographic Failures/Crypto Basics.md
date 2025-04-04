@@ -2,7 +2,10 @@
 
 ## Vulnerability Description
 This module exposes a range of insecure cryptographic practices commonly found in web applications. These include the use of reversible encoding methods (e.g., Base64 for authentication), weak or outdated hashing algorithms (e.g., MD5, SHA-1), insecure password storage (e.g., unsalted hashes), weak obfuscation techniques (e.g., XOR encoding), and the inclusion of sensitive secrets (e.g., encryption keys or passwords) directly within container images or codebases.
+
+
 ## Steps Taken
+
 ## 1. Concept
 ![intro](https://github.com/user-attachments/assets/76651c5e-61c2-45e1-bc96-7a317845468f)
 
@@ -83,21 +86,17 @@ the username 'tom' into 'mot', appended similar pattern text, converted to hex, 
 
 - Sensitive secrets (e.g., default_secret) were hardcoded into a Docker container image and used to decrypt messages with OpenSSL, highlighting the risk of secret exposure in containerized environments.
 
-  
-## Risk Rating
-Most of the examples involve direct exposure or compromise of sensitive data (passwords, hashes, secrets) through insecure cryptographic implementations or storage practices. These issues, if found in production environments, can lead to unauthorized access, data breaches, and full system compromise.
-
+---
 
 ## Remediation Recommendation
+
 - Avoid using encoding (e.g., Base64) for authentication or security; use proper encryption mechanisms with secure transport protocols (TLS).
-
 - Use strong and modern hashing algorithms such as bcrypt, Argon2, or PBKDF2 for password storage with sufficient salting.
-
 - Eliminate XOR or custom encoding schemes for securing secrets and use industry-standard encryption libraries and algorithms.
-
 - Securely manage private keys and never expose them in client-side environments or publicly accessible repositories.
-
 - Remove hardcoded secrets from container images and use secret management solutions (e.g., HashiCorp Vault, Docker Secrets, AWS Secrets Manager).
+
+---
 
 ## References
 - OWASP Password Storage Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
