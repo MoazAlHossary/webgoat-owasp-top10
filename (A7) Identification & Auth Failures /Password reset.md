@@ -1,3 +1,5 @@
+# Password reset
+
 ## Vulnerability Description
 
 The password reset functionality in many web applications often suffers from logic flaws and insecure design practices. Common issues include revealing whether an account exists, relying on easily guessable or publicly available security questions, and failing to implement brute-force protections or lockout mechanisms. Additionally, some systems send passwords or sensitive reset information via insecure channels like plaintext emails. These flaws collectively allow attackers to enumerate users, guess reset answers, and hijack accounts with minimal resistance.
