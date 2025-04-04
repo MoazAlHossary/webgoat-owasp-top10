@@ -7,44 +7,43 @@ SQL injection remains one of the most dangerous web vulnerabilities due to its a
 ---
 
 ## Screenshots
-
-### 🔹 `1.png`  
+ 
+###  Immutable Queries  
 ![1](https://github.com/user-attachments/assets/d8ada267-3587-4390-ba9d-29dfceca8594)  
-**Immutable Queries** — Demonstrates how static queries and properly parameterized queries are resistant to injection.
+Demonstrates how static queries and properly parameterized queries are resistant to injection.
 
-### 🔹 `2.png`  
+### Stored Procedures   
 ![2](https://github.com/user-attachments/assets/86c5ad30-0777-4e93-9037-fdcad8fe9974)  
-**Stored Procedures** — Shows safe vs. unsafe stored procedures. Safe ones use parameters; unsafe ones concatenate SQL dynamically.
-
-### 🔹 `3.png`  
+Shows safe vs. unsafe stored procedures. Safe ones use parameters; unsafe ones concatenate SQL dynamically.
+ 
+### Parameterized Queries – Java Snippet  
 ![3](https://github.com/user-attachments/assets/314c061b-3ac4-437b-94fd-ab64faf6e094)  
-**Parameterized Queries – Java Snippet** — Example of safe SQL usage with `PreparedStatement` and `setString()` in Java.
+Example of safe SQL usage with `PreparedStatement` and `setString()` in Java.
 
-### 🔹 `4.png`  
+### Parameterized Queries – Java Example  
 ![4](https://github.com/user-attachments/assets/14a4f14c-6a6d-46cb-8dbf-a21c1a1e351a)  
-**Parameterized Queries – Java Example** — Demonstrates secure query execution using `PreparedStatement` and result processing.
+Demonstrates secure query execution using `PreparedStatement` and result processing.
 
-### 🔹 `5.png`  
+### Try It – Writing Safe Code  
 ![5](https://github.com/user-attachments/assets/8ddd24c3-8506-4c1a-872c-82ab75a65002)  
-**Try It – Writing Safe Code** — Writing safe JDBC to retrieve user status using both `name` and `email` with bound variables.
+Writing safe JDBC to retrieve user status using both `name` and `email` with bound variables.
 
 ![a32_10](https://github.com/user-attachments/assets/6e74b386-b632-4c9f-a20b-84d91f9d2569)  
-**Success Message** — Confirmed secure implementation.
 
-### 🔹 `6.png`  
+### Try It – Writing Safe Code (From Scratch)
 ![6](https://github.com/user-attachments/assets/61c9d6f6-ac7d-489b-b4ca-1b4e6c80f014)  
-**Try It – Writing Safe Code (From Scratch)** — Build Java code using JDBC and prepared statements to safely fetch user data.
+Build Java code using JDBC and prepared statements to safely fetch user data.
 
 ![a32_11](https://github.com/user-attachments/assets/23113e34-118c-4182-9cd6-c2ae743e418d)  
-**Success** — Code passes the test for SQLi protection.
+Code passes the test for SQLi protection.
 
-### 🔹 `7.png`  
+### Parameterized Queries – .NET 
 ![7](https://github.com/user-attachments/assets/50f18fa9-cbd2-4d1b-bfb2-8d5e985e45d8)  
-**Parameterized Queries – .NET** — Example of using `.Add()` to safely pass input to SQL queries via `SqlCommand` in .NET.
+Example of using `.Add()` to safely pass input to SQL queries via `SqlCommand` in .NET.
 
-### 🔹 `8.png`  
+### Input Validation Required? 
 ![8](https://github.com/user-attachments/assets/497aea0b-2ecb-4cf6-9d55-6334bab9c361)  
-**Input Validation Required?** — Clarifies why filtering alone is not sufficient, and input validation is still necessary even with prepared statements.
+Clarifies why filtering alone is not sufficient, and input validation is still necessary even with prepared statements.
 
 ---
 
