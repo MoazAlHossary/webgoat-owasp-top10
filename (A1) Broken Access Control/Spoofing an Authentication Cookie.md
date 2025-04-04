@@ -4,6 +4,8 @@
 The application uses predictable and reversible cookie values to manage authentication. Instead of securely signing or encrypting authentication cookies, it uses a format that can be reverse-engineered and manipulated to spoof other users' identities.
 
 ## Steps Taken
+  
+   ![Step extra](https://github.com/user-attachments/assets/d1695cf7-ca43-495a-8a00-b1b1e487ff4a)
 
 1. Logged in using valid credentials `webgoat:webgoat` to retrieve an authentication cookie.
    ![Step 1](https://github.com/user-attachments/assets/7d6a6315-25ee-4061-a093-9646bccee4fd)
