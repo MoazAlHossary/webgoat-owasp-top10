@@ -1,8 +1,15 @@
 # SQL Injection (intro)
 
 
-This module explores how poorly sanitized user input can be leveraged to perform SQL injection attacks, manipulate backend databases, and violate application security. Below are key slides, exercises, and completed tasks from the WebGoat A3 SQL Injection module.
+## Vulnerability Description
 
+**SQL Injection (SQLi)** occurs when unsanitized user inputs are directly included in SQL queries, allowing attackers to manipulate the logic of those queries. This opens the door to unauthorized data access, modification, or deletion. In severe cases, an attacker can execute administrative operations or operating system commands via the database engine.
+
+In WebGoat, several forms of SQLi were demonstrated:
+- **String SQL Injection**: injecting `OR '1'='1` into fields using string concatenation.
+- **Numeric SQL Injection**: modifying logic using numbers (e.g., `1 OR 1=1`).
+- **Query Chaining**: using `;` to append additional statements.
+- **DML/DDL/DCL Exploitation**: modifying or revoking user privileges and altering schema/data.
 
 ---
 
@@ -87,17 +94,7 @@ This module explores how poorly sanitized user input can be leveraged to perform
   ![a3_10](https://github.com/user-attachments/assets/63e4c418-96cb-44e6-ac2e-c4f2fd4cfa73)
 
 
-## Vulnerability Description
 
-**SQL Injection (SQLi)** occurs when unsanitized user inputs are directly included in SQL queries, allowing attackers to manipulate the logic of those queries. This opens the door to unauthorized data access, modification, or deletion. In severe cases, an attacker can execute administrative operations or operating system commands via the database engine.
-
-In WebGoat, several forms of SQLi were demonstrated:
-- **String SQL Injection**: injecting `OR '1'='1` into fields using string concatenation.
-- **Numeric SQL Injection**: modifying logic using numbers (e.g., `1 OR 1=1`).
-- **Query Chaining**: using `;` to append additional statements.
-- **DML/DDL/DCL Exploitation**: modifying or revoking user privileges and altering schema/data.
-
----
 
 ## Observed Behavior
 
