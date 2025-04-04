@@ -6,16 +6,6 @@ Logging security failures occur when applications do not properly validate, sani
 
 Logging should avoid recording sensitive data such as passwords, API keys, or PII. Improper logging may also allow attackers to inject malicious log entries or cause confusion in audit trails.
 
-
-<img width="995" alt="h" src="" />
-<img width="782" alt="g" src="" />
-<img width="587" alt="f" src="" />
-<img width="1274" alt="e" src="" />
-<img width="487" alt="d" src="" />
-<img width="1021" alt="c" src="" />
-<img width="467" alt="b" src="" />
-<img width="488" alt="a" src="" />
-
 ---
 
 ## Step-by-Step Documentation with Screenshots
