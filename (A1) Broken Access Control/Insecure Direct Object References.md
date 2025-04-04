@@ -62,6 +62,8 @@ The application exposes internal object references such as `userId`, which can b
 
    ![a11_14](https://github.com/user-attachments/assets/90f42ceb-13a2-4bf0-b4b3-56a05071a99d)
 
+   
+   ![a11_15](https://github.com/user-attachments/assets/ec8989b3-53f5-4d8d-9289-f347e461f99d)
 
 ---
 
