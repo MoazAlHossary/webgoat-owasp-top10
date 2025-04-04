@@ -3,6 +3,8 @@
 ## Vulnerability Description
 The application uses predictable and reversible cookie values to manage authentication. Instead of securely signing or encrypting authentication cookies, it uses a format that can be reverse-engineered and manipulated to spoof other users' identities.
 
+---
+
 ## Steps Taken
   
    ![Step extra](https://github.com/user-attachments/assets/d1695cf7-ca43-495a-8a00-b1b1e487ff4a)
@@ -34,17 +36,20 @@ The application uses predictable and reversible cookie values to manage authenti
 10. Successfully logged in as the user "tom" without valid credentials.
    ![Step 10](https://github.com/user-attachments/assets/4053f070-7d1d-4537-ade2-d9812d6546b0)
 
+---
+
 ## Observed Behavior
 The application accepted the manipulated cookie and logged the attacker in as "tom", a user with presumably higher privileges, without requiring their password.
 
-## Risk Rating
-**High** – This vulnerability allows an attacker to bypass authentication entirely, impersonate any user, and potentially access sensitive information or administrative functions.
+---
 
 ## Remediation Recommendation
 Implement proper authentication cookie handling using:
 - Signed cookies with HMAC to verify authenticity
 - Encrypted cookie values to prevent readable or tamperable content
 - Regenerating sessions upon login and validating cookies server-side
+
+---
 
 ## References
 - OWASP: [Authentication and Session Management](https://owasp.org/www-project-top-ten/2017/A2_2017-Broken_Authentication)
