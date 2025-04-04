@@ -62,6 +62,20 @@ Some functionalities in the application are only hidden using client-side contro
 
 ---
 
+
+## Observed Behavior
+
+- The application relied on client-side mechanisms (e.g., CSS hidden-menu-item) to obscure access to sensitive functionality like the Users and Config menus.
+- Hidden menu items were still accessible through direct navigation or manipulation of the DOM, indicating no proper server-side authorization checks.
+- Sensitive endpoints such as /access-control/users and /access-control/users-admin-fix returned user data when accessed directly via HTTP requests.
+- Changing the HTTP method from POST to GET and modifying request headers (e.g., setting Content-Type to application/json) enabled successful data extraction.
+- The application failed to validate user roles on the server, allowing privilege escalation by manipulating request data (e.g., setting "admin": true in JSON).
+- No access denial or redirection was encountered when accessing restricted endpoints without proper authentication or authorization.
+
+
+---
+
+
 ### Remediation Recommendation
 - Enforce role-based access control (RBAC) on the server side for all sensitive endpoints.
 - Avoid relying on UI obscurity (e.g., hidden elements, CSS tricks) for access control.
