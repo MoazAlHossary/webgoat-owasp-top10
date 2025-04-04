@@ -73,7 +73,7 @@ The application exposes internal object references such as `userId`, which can b
 
 ---
 
-### Risk Rating
+### Risk:
 Enables unauthorized data access and potential privilege escalation across user accounts.
 
 ---
